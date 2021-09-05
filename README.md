@@ -5,7 +5,7 @@ Test task for Together Networks company
 install project
 $ npm i
 
-developmrnt
+development
 $ gulp
 
 build
