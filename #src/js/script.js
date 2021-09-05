@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  document.querySelector('button[disabled]').addEventListener('mouseenter', () => {
+    alert('123')
+  })
+
   //show header login form
 
   headerBtn.addEventListener("click", (e) => {
