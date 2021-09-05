@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Company</title>
+    <meta name="description" content="Star Company" />
+    <meta name="keywords" content="Some Star Services" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Some Star Services" />
+    <meta property="og:description" content="Some Star Services" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:site_name" content="Star Company" />
+    <link
+      rel="preload"
+      href="./fonts/ProximaNova-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/ProximaNova-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+
+  <body>
+    <main class="main">
+      <header class="header">
+        <div class="container header__container">
+          <a href="#" class="header__logo logo">
+            <picture>
+              <source
+                srcset="./img/logo.webp, ./img/logo@2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                srcset="./img/logo.png, ./img/logo@2x.png 2x"
+                type="image/png"
+              />
+              <img width="" src="./img/logo.png" alt="StarCompany" />
+            </picture>
+          </a>
+          <form action="#" class="form header__form hidden">
+            <div class="email-wrapper">
+              <label class="form__label">
+                <input
+                  class="form__input"
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                />
+              </label>
+              <p class="form__warn">Please enter a valid email address</p>
+            </div>
+            <label class="form__label">
+              <input
+                class="form__input"
+                placeholder="Password"
+                type="password"
+                name="password"
+                minlength="5"
+              />
+            </label>
+            <button
+              disabled
+              type="submit"
+              class="btn btn_primary header__form-btn mainBtn"
+            >
+              Log in
+            </button>
+          </form>
+          <button class="btn btn_transparent header__btn">Log in</button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="container hero__container">
+          <h1 class="hero__title title">
+            <span class="title__line title__line_primary"
+              >StarCompany DESIGNS, MANUFACTURES AND</span
+            >
+            <br />
+            <span class="title__line title__line_secondary"
+              >Launches Advanced Rockets and Spacecrafts</span
+            >
+          </h1>
+          <form class="form hero__form" action="#">
+            <button
+              class="hero__form-btn btn btn__prev"
+              type="button"
+              name="previous step"
+            ></button>
+            <div class="hero__form-body">
+              <div class="hero__form-steps">
+                <div
+                  title="Step 1 of 5 - Who are you?"
+                  class="hero__form-step active"
+                >
+                  <label class="hero__form-label form__label select">
+                    <span>Who are you?</span>
+                    <select class="hero__form-field" name="who">
+                      <option selected disabled>Choose your spec</option>
+                      <option>Engineer 1</option>
+                      <option>Engineer 2</option>
+                      <option>Engineer 3</option>
+                      <option>Engineer 4</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div
+                  title="Step 2 of 5 - What is your age?"
+                  class="hero__form-step"
+                >
+                  <label class="hero__form-label form__label select">
+                    <span>What is your age?</span>
+                    <select class="hero__form-field" name="age">
+                      <option>21</option>
+                      <option>22</option>
+                      <option>23</option>
+                      <option>24</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div title="Step 3 of 5 - I am from..." class="hero__form-step">
+                  <label class="hero__form-label form__label">
+                    <span>I am from</span>
+                    <input
+                      name="adress"
+                      class="hero__form-field"
+                      type="text"
+                      placeholder="New Roads, 70760"
+                    />
+                  </label>
+                  <p class="hero__form-note">
+                    E.g.: New Roads or 70760 We don’t use postal addresses to
+                    contact members directly!
+                  </p>
+                </div>
+
+                <div
+                  title="Step 4 of 5 - Your email adress"
+                  class="hero__form-step email-wrapper"
+                >
+                  <label class="hero__form-label form__label">
+                    <span>Your email adress</span>
+                    <input
+                      name="email"
+                      class="hero__form-field email"
+                      type="email"
+                      placeholder="Input your email"
+                    />
+                  </label>
+                  <p class="form__warn hero__form-warn">
+                    Please enter a valid email address
+                  </p>
+                </div>
+
+                <div
+                  title="Step 5 of 5 - Create your password"
+                  class="hero__form-step"
+                >
+                  <label class="hero__form-label">
+                    <span>Create your password</span>
+                    <input class="hero__form-field" type="password" />
+                  </label>
+                  <p class="hero__form-note">
+                    By clicking the button above you agree to our Terms of Use
+                    and Privacy Policy including use of cookies and to receive
+                    newsletters, account updates and offers sent by StarCompany.
+                  </p>
+                </div>
+              </div>
+              <ul class="hero__form-progress"></ul>
+            </div>
+            <button type="button" class="hero__form-btn btn btn_next mainBtn">
+              Next step
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

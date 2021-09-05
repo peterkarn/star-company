@@ -1,0 +1,187 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1025px;
+}
+
+.dn {
+  display: none;
+}
+
+button {
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: auto;
+  font: inherit;
+  line-height: normal;
+  color: inherit;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: $radius;
+  padding: 11px;
+  min-width: 80px;
+  font-size: 13px;
+  color: $white;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:active,
+  &:focus-visible {
+    outline: 2px solid $white;
+    outline-offset: 3px;
+  }
+
+  &_primary {
+    background-image: linear-gradient(29deg, #5866ea 25%, #2ba0ea 74%);
+
+    &:hover {
+      box-shadow: 0 0 5px 5px rgba(70, 86, 231, 0.5);
+    }
+  }
+
+  &_next,
+  &_done {
+    position: relative;
+    padding-right: 37px;
+    padding-left: 17px;
+    min-width: 120px;
+    min-height: 42px;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      border-bottom: 2px solid $white;
+      border-left: 2px solid $white;
+      width: 10px;
+      height: 10px;
+      transform: rotate(220deg);
+    }
+  }
+
+  &_next {
+    background-image: linear-gradient(29deg, #5866ea 25%, #2ba0ea 74%);
+
+    &:hover {
+      box-shadow: 0 0 5px 5px rgba(70, 86, 231, 0.5);
+    }
+  }
+
+  &_done {
+    background-image: linear-gradient(29deg, #4caf50 25%, #3cd342 74%);
+
+    &::after {
+      transform: rotate(0) translate(-5px, -3px) scale(0.9)
+        skew(0.12turn, 123deg);
+    }
+  }
+
+  &__prev {
+    position: relative;
+    border: 2px solid $white;
+    border-radius: $radius;
+    min-width: 42px;
+    min-height: 37px;
+    opacity: 0.6;
+    transition: opacity 0.3;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid $white;
+      border-left: 2px solid $white;
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg) translateX(2px);
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+
+  &_transparent {
+    border: 2px solid $white;
+
+    &:hover {
+      background-image: linear-gradient(29deg, #5866ea 25%, #2ba0ea 74%);
+    }
+  }
+}
+
+.mainBtn {
+  &:disabled {
+    opacity: 0.8;
+    filter: grayscale(1);
+    cursor: not-allowed;
+  }
+}
